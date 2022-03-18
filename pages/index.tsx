@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import { getPosts } from '../services';
 import { PostCard, Categories, PostWidget } from '../components';
+import { FeaturedPosts } from '../sections';
 
 const Home: NextPage = ({ posts }: any) => {
   return (
@@ -10,6 +11,8 @@ const Home: NextPage = ({ posts }: any) => {
         <title>Tony Blog</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <FeaturedPosts />
 
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
         <div className="col-span-1 lg:col-span-8">

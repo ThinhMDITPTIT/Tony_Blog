@@ -17,9 +17,9 @@ export default async function comments(
   req: NextApiRequest,
   res: NextApiResponse<Data | unknown>
 ) {
-  const { name, email, comment, slug } = req.body;
+  const { name, email, content, slug } = req.body;
 
-  const graphQLClient = new GraphQLClient(graphqlAPI!, {
+  const graphQLClient: GraphQLClient = new GraphQLClient(graphqlAPI!, {
     headers: {
       authorization: `Bearer ${graphCmsTOKEN}`,
     },
@@ -28,19 +28,19 @@ export default async function comments(
   // When use 'mutation' in graphQL that simply means that we're going to update some data or add some new data like a new comment
   // To accept params => use dollar sign $
   // When run this query => going to create a new comment inside of the graphCMS Dashboard
+  // # Connent the comment + name + email to a specific post that the user commented on
   const query = gql`
     mutation CreateComment(
       $name: String!
       $email: String!
-      $comment: String
+      $content: String!
       $slug: String!
     ) {
-      # Connent the comment + name + email to a specific post that the user commented on
       createComment(
         data: {
           name: $name
           email: $email
-          comment: $comment
+          content: $content
           post: { connect: { slug: $slug } }
         }
       ) {
@@ -51,10 +51,10 @@ export default async function comments(
 
   try {
     const result = await graphQLClient.request(query, {
-      name: req.body.name,
-      email: req.body.email,
-      comment: req.body.comment,
-      slug: req.body.slug,
+      name,
+      email,
+      content,
+      slug,
     });
 
     return res.status(200).send(result);
