@@ -1,5 +1,5 @@
 # Tony Blog
-Blog app using different modern technology like Next.js, ReactJS, GraphQL, GraphCMS, ...
+Blog app using different modern technology like Next.js, ReactJS, TailwindCSS, GraphQL, GraphCMS, JavaScript, TypeScript, ...
 
 ## Link Blog: 
 
