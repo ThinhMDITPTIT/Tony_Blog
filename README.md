@@ -1,7 +1,7 @@
 # Tony Blog
 Blog app using different modern technology like Next.js, ReactJS, TailwindCSS, GraphQL, GraphCMS, JavaScript, TypeScript, ...
 
-## Link Blog: 
+## Link Blog: https://tony-blog-eta.vercel.app/
 
 ### Features:
 - Modern views
@@ -18,9 +18,16 @@ Blog app using different modern technology like Next.js, ReactJS, TailwindCSS, G
 
 ### Amazing View:
 #### Homepage
+![image](https://user-images.githubusercontent.com/56442337/158978819-984a436e-966b-41e5-a8ae-76a596fa8818.png)
+
 #### Post Detail
+![image](https://user-images.githubusercontent.com/56442337/158978930-71bb7b09-2466-4641-b7ae-466ec30c0ff4.png)
+
 #### Adjacent Posts
+![image](https://user-images.githubusercontent.com/56442337/158979123-3e064038-769d-40fd-8462-eb930c5c8420.png)
+
 #### Comments
+![image](https://user-images.githubusercontent.com/56442337/158979343-92b40794-8c70-471e-a3f4-8ecf0f73a818.png)
 
 # Next.js + Tailwind CSS Example
 
