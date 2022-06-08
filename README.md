@@ -7,6 +7,7 @@ Blog app using different modern technology like Next.js, ReactJS, TailwindCSS, G
 - Modern views
 - Using GraphCMS to manage blog's content
 - Navbar with link to Server Statically Generated support by Next.js 
+- Daily Blog
 - View list Featured Posts
 - View list Post Cards
 - Recent Posts / Related Posts
